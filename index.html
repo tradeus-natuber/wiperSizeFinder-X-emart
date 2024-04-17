@@ -5,51 +5,74 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wiper Size Finder</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    padding: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9; 
-}
-
-#searchBox,
-#manufacturerFilter {
-    margin-bottom: 10px;
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in width */
-}
-
-@media only screen and (min-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f9f9f9; 
+    }
+    
     #searchBox,
     #manufacturerFilter {
-        width: calc(50% - 10px);
-        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        box-sizing: border-box; /* Ensure padding is included in width */
     }
-}
-</style>
+    
+    /* 모바일 화면에서 테이블 콘텐츠가 넘치지 않도록 스타일 조정 */
+    @media only screen and (max-width: 600px) {
+        table, th, td {
+            font-size: 14px; /* 글꼴 크기 감소 */
+            padding: 4px; /* 패딩 감소 */
+        }
+    
+        /* 검색창과 제조업체 필터 크기를 조정하여 더 작은 화면에 맞춤 */
+        #searchBox,
+        #manufacturerFilter {
+            width: 100%; /* 작은 화면에 맞추어 너비 조정 */
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+    
+        .container {
+            padding: 5px; /* 컨테이너 패딩 감소 */
+        }
+    }
+    
+    /* 데스크톱 화면에 대한 스타일 */
+    @media only screen and (min-width: 601px) {
+        #searchBox,
+        #manufacturerFilter {
+            width: calc(50% - 10px);
+            margin-right: 10px;
+        }
+    }
+    </style>
+    
 </head>
 <body>
 
