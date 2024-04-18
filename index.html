@@ -9,6 +9,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20220115/pngtree-blue-transparent-abstract-line-pattern-image_982920.jpg');
     }
     
     .container {
@@ -27,12 +28,18 @@
     }
     
     th {
-        background-color: #f2f2f2;
+        background-color: #16327e;
+        color: white;
+        text-align: center;
     }
     
+    tr {
+        background-color: white; 
+    }
     tr:nth-child(even) {
         background-color: #f9f9f9; 
     }
+    
     
     #searchBox,
     #manufacturerFilter {
@@ -60,6 +67,7 @@
     
         .container {
             padding: 5px; /* 컨테이너 패딩 감소 */
+            
         }
     }
     
@@ -77,13 +85,14 @@
 <body>
 
 <div class="container">
-
-<h2>내차 와이퍼 크기찾기</h2>
+    <!-- 최상단 배너 이미지 -->
+<img src="head.jpg" alt="1" style="width: 100%; display:block;margin: 0 auto 1% auto;">
+    <!-- 최상단 배너 이미지 -->
 
 <div style="display: flex; flex-wrap: wrap;">
-    <input type="text" id="searchBox" placeholder="내차의 모델 또는 연식을 입력하세요." onkeyup="filterVehicles()">
+    
     <select id="manufacturerFilter" onchange="filterVehicles()">
-        <option value="">전체</option>
+        <option value="">제조사</option>
         <option value="아바쓰">아바쓰</option>
         <option value="어큐라">어큐라</option>
         <option value="알파로메오">알파로메오</option>
@@ -156,6 +165,7 @@
         <option value="폭스바겐">폭스바겐</option>
         <option value="볼보">볼보</option>
     </select>
+    <input type="text" id="searchBox" placeholder="내 차량의 모델 또는 연식을 입력하세요." onkeyup="filterVehicles()">
 </div> 
 
 
@@ -165,7 +175,7 @@
             <th>제조사</th>
             <th>모델</th>
             <th>연식</th>
-            <th>운전자석 (mm)</th>
+            <th>운전석 (mm)</th>
             <th>보조석 (mm)</th>
             <th>어댑터 번호</th>
         </tr>
@@ -178,7 +188,8 @@
 </div>
 
 <script>
-const vehicleData = [{"manufacturer":"아바쓰","model":"124 (348)","year":"2015-2019","운전석\n(in)":18,"driverSideWiper":450,"조수석\n(in)":19,"passengerSideWiper":475,"후면\n(in)":null,"후면\n(mm)":null,"adapterNumber":"02"},
+const vehicleData =[
+{"manufacturer":"아바쓰","model":"124 (348)","year":"2015-2019","운전석\n(in)":18,"driverSideWiper":450,"조수석\n(in)":19,"passengerSideWiper":475,"후면\n(in)":null,"후면\n(mm)":null,"adapterNumber":"02"},
 {"manufacturer":"아바쓰","model":"500(Convertible)","year":"2011-2014","운전석\n(in)":24,"driverSideWiper":600,"조수석\n(in)":13,"passengerSideWiper":0,"후면\n(in)":null,"후면\n(mm)":null,"adapterNumber":"01"},
 {"manufacturer":"아바쓰","model":"595(Convertible)","year":"2014-2021","운전석\n(in)":24,"driverSideWiper":600,"조수석\n(in)":13,"passengerSideWiper":0,"후면\n(in)":null,"후면\n(mm)":null,"adapterNumber":"01"},
 {"manufacturer":"아바쓰","model":"595(Hatch)","year":"2014-2021","운전석\n(in)":24,"driverSideWiper":600,"조수석\n(in)":13,"passengerSideWiper":0,"후면\n(in)":null,"후면\n(mm)":null,"adapterNumber":"01"},
