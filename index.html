@@ -94,7 +94,27 @@
         }
     }
 
-    
+    #adapterInfo {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f2f2f2; /* 밝은 회색 배경 */
+    border: 1px solid #ccc; /* 경계선 추가 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    font-size: 16px; /* 글꼴 크기 */
+    color: #333; /* 글꼴 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 박스 그림자 효과 */
+    }
+
+    .container {
+        max-width: 800px; /* 최대 너비 설정 */
+        margin: auto; /* 가운데 정렬 */
+        padding: 20px; /* 패딩 추가 */
+        background-color: white; /* 배경색 */
+        border-radius: 8px; /* 컨테이너 모서리 둥글게 */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 컨테이너에 그림자 추가 */
+    }
+
     
     </style>
     
@@ -169,18 +189,19 @@
 <table id="vehiclesTable">
     <thead>
         <tr>
-            <th>연식</th>
             <th>운전석 (mm)</th>
             <th>보조석 (mm)</th>
+            <th>후면 (mm)</th>
             <th>어댑터 번호</th>
-            <th>어댑터<br>구매여부</th>
         </tr>
     </thead>
     <tbody>
         <!-- Vehicle data will be populated here using JavaScript -->
     </tbody>
 </table>
-
+    <div id="adapterInfo" style="margin-top: 20px;">
+        <!-- 어댑터 구매 정보가 JavaScript를 통해 여기에 채워짐 -->
+    </div>
 </div>
 
 <script src="script.js"></script>
