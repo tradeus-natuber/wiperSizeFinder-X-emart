@@ -1559,6 +1559,8 @@ function updateModelsDropdown() {
     yearFilter.innerHTML = '<option value="">연식 선택</option>'; // Reset year dropdown
     yearFilter.disabled = true;
     vehiclesTable.innerHTML = ''; // Clear table when manufacturer changes
+    document.getElementById('adapterInfo').innerHTML = ''; // 어댑터 구매여부 정보 초기화
+
 
     if (selectedManufacturer) {
         let models = vehicleData
@@ -1576,7 +1578,7 @@ function updateModelsDropdown() {
         // If no manufacturer is selected, keep everything reset
         modelFilter.disabled = true;
         yearFilter.disabled = true;
-        vehiclesTable.innerHTML = '';
+        //vehiclesTable.innerHTML = '';
     }
 }
 
@@ -1585,6 +1587,8 @@ function updateYearsDropdown() {
     yearFilter.disabled = !selectedModel;
     yearFilter.innerHTML = '<option value="">연식 선택</option>'; // Reset year dropdown
     vehiclesTable.innerHTML = ''; // Clear table when model changes
+    document.getElementById('adapterInfo').innerHTML = ''; // 어댑터 정보 초기화
+
 
     if (selectedModel) {
         let years = vehicleData
@@ -1598,6 +1602,8 @@ function updateYearsDropdown() {
             option.textContent = year;
             yearFilter.appendChild(option);
         });
+    } else {
+        yearFilter.disabled =true;
     }
 }
 
