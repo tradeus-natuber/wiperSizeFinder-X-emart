@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wiper Size Finder</title>
@@ -120,7 +124,7 @@
     
 </head>
 <body>
-
+    
 <div class="container">
     <!-- 최상단 배너 이미지 -->
 <img src="head.jpg" alt="1" style="width: 100%; display:block;margin: 0 auto 1% auto;">
@@ -184,6 +188,7 @@
         <option value="">연식 선택</option>
         <!-- 연식 옵션들 -->
     </select>
+    <div id="google_translate_element"></div>
 </div> 
 
 <table id="vehiclesTable">
@@ -205,6 +210,14 @@
 </div>
 
 <script src="script.js"></script>
+
+<!-- Google 번역기 스크립트 추가 -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'ko'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
